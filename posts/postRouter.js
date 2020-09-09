@@ -3,10 +3,7 @@ const Posts = require('../posts/postDb')
 
 const router = express.Router();
 
-router.use((req, res, next) => {
-  console.log('postRouter')
-  next()
-})
+
 
 router.get('/', (req, res) => {
   // do your magic!
