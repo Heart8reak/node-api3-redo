@@ -10,7 +10,7 @@ server.use(express.json())
 server.use(helmet())
 server.use(logger)
 
-server.use('api/posts', postsRouter)
+server.use('/api/posts', postsRouter)
 server.use('/api/users', userRouter)
 
 server.get('/', (req, res) => {

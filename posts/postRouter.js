@@ -9,9 +9,11 @@ router.get('/', (req, res) => {
   // do your magic!
   Posts.get(req.query)
     .then(post => {
+      console.log(req.query)
       res.status(200).json(post)
     })
     .catch(err => {
+      console.log(err)
       res.status(500).json({ message: 'Error getting posts' })
     })
 });
@@ -63,6 +65,7 @@ function validatePostId(req, res, next) {
     .then(post => {
       if (post) {
         req.post = post
+        next()
       } else {
         res.status(400).json({ message: 'invalid post id' })
       }
