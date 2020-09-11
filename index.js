@@ -1,7 +1,7 @@
 // code away!
 const server = require('./server')
 
-console.log(process.env)
+// console.log(process.env)
 
 const PORT = process.env.PORT || 4000
 
