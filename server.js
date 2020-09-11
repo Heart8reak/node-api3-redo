@@ -1,6 +1,8 @@
+require('dotenv').config()
 const express = require('express');
 const helmet = require('helmet')
 const cors = require('cors')
+
 
 const userRouter = require('./users/userRouter')
 const postsRouter = require('./posts/postRouter')
